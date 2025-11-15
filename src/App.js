@@ -13,7 +13,7 @@ import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Josestore-frontend-project">
       <CartProvider>
         <Routes>
           <Route path="/" element={<MainLayout />}>
