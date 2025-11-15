@@ -1,7 +1,7 @@
 // src/pages/Contact.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail } from "lucide-react"; // npm i lucide-react
+import { MapPin, Phone, Mail } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -21,6 +21,7 @@ export default function Contact() {
 
     setLoading(true);
 
+    // ✅ Replace these with your actual EmailJS credentials
     const serviceID = "YOUR_SERVICE_ID";
     const templateID = "YOUR_TEMPLATE_ID";
     const publicKey = "YOUR_PUBLIC_KEY";
@@ -34,8 +35,8 @@ export default function Contact() {
           setLoading(false);
         },
         (error) => {
+          console.error("EmailJS Error:", error);
           alert("Oops! Something went wrong. Try again.");
-          console.error(error);
           setLoading(false);
         }
       );
@@ -74,7 +75,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Optional Map Image */}
           <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.212435749239!2d78.0123456789!3d12.345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7d2b7f0e1234%3A0x123456789abcdef0!2sTirupathur%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
@@ -83,7 +83,7 @@ export default function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Location Map"
-            ></iframe>
+            />
           </div>
         </motion.div>
 
@@ -141,6 +141,7 @@ export default function Contact() {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
             className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold shadow-md hover:bg-indigo-700 transition"
+            disabled={loading}
           >
             {loading ? "Sending..." : "Send Message"}
           </motion.button>
