@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Josestore-frontend-project/static/css/main.b6abad4c.css",
-    "main.js": "/Josestore-frontend-project/static/js/main.95c821c2.js",
+    "main.js": "/Josestore-frontend-project/static/js/main.d3c36582.js",
     "index.html": "/Josestore-frontend-project/index.html",
     "main.b6abad4c.css.map": "/Josestore-frontend-project/static/css/main.b6abad4c.css.map",
-    "main.95c821c2.js.map": "/Josestore-frontend-project/static/js/main.95c821c2.js.map"
+    "main.d3c36582.js.map": "/Josestore-frontend-project/static/js/main.d3c36582.js.map"
   },
   "entrypoints": [
     "static/css/main.b6abad4c.css",
-    "static/js/main.95c821c2.js"
+    "static/js/main.d3c36582.js"
   ]
 }
